@@ -1,0 +1,69 @@
+db.usuarios.insertMany(
+[
+{ "_id": 1, "nombre": "Juan Pérez", "email": "juan.perez@fakemail.com", "telefono": "123456789", "activo": true },
+{ "_id": 2, "nombre": "Ana López", "email": "ana.lopez@fakemail.com", "telefono": "987654321", "activo": true },
+{ "_id": 3, "nombre": "Carlos García", "email": "carlos.garcia@fakemail.com", "telefono": "456789123", "activo": false},
+{ "_id": 4, "nombre": "Laura Martínez", "email": "laura.martinez@fakemail.com", "telefono": "789123456", "activo": true},
+{ "_id": 5, "nombre": "Luis Fernández", "email": "luis.fernandez@fakemail.com", "telefono": "321654987", "activo": false },
+{ "_id": 6, "nombre": "María Gómez", "email":"maria.gomez@fakemail.com", "telefono": "654321789", "activo": true },
+{ "_id": 7, "nombre": "Pedro Sánchez", "email": "pedro.sanchez@fakemail.com", "telefono": "147258369", "activo": true},
+{ "_id": 8, "nombre": "Elena Díaz", "email":"elena.diaz@fakemail.com", "telefono": "369258147", "activo": false },
+{ "_id": 9, "nombre": "Jorge Ramírez", "email":"jorge.ramirez@fakemail.com", "telefono": "987321654", "activo": true},
+{ "_id": 10, "nombre": "Sofía Castro", "email":"sofia.castro@fakemail.com", "telefono": "741852963", "activo": true }
+])
+
+db.libros.insertMany(
+[
+{ "_id": 1, "titulo": "Cien años de soledad", "autor_id": 1, "categoria_id": 1, "disponible": true },
+{ "_id": 2, "titulo": "El señor de los anillos", "autor_id": 2, "categoria_id": 2, "disponible": false },
+{ "_id": 3, "titulo": "Don Quijote de la Mancha", "autor_id": 3, "categoria_id": 1, "disponible": true },
+{ "_id": 4, "titulo": "El Hobbit", "autor_id": 2, "categoria_id": 2, "disponible": true },
+{ "_id": 5, "titulo": "1984", "autor_id": 4, "categoria_id": 3, "disponible": false },
+{ "_id": 6, "titulo": "Fahrenheit 451", "autor_id": 5, "categoria_id": 3, "disponible": true },
+{ "_id": 7, "titulo": "Orgullo y prejuicio", "autor_id": 6, "categoria_id": 4, "disponible": true },
+{ "_id": 8, "titulo": "Matar a un ruiseñor", "autor_id": 7, "categoria_id": 3, "disponible": false },
+{ "_id": 9, "titulo": "Crónica de una muerte anunciada", "autor_id": 1, "categoria_id": 1, "disponible": true },
+{ "_id": 10, "titulo": "La Odisea", "autor_id": 8, "categoria_id": 5, "disponible": true }
+])
+
+db.autores.insertMany(
+[
+{ "_id": 1, "nombre": "Gabriel García Márquez", "nacionalidad":"Colombiana" },
+{ "_id": 2, "nombre": "J.R.R. Tolkien", "nacionalidad":"Británica" },
+{ "_id": 3, "nombre": "Miguel de Cervantes", "nacionalidad":"Española" },
+{ "_id": 4, "nombre": "George Orwell", "nacionalidad": "Británica"},
+{ "_id": 5, "nombre": "Ray Bradbury", "nacionalidad":"Estadounidense" },
+{ "_id": 6, "nombre": "Jane Austen", "nacionalidad": "Británica"},
+{ "_id": 7, "nombre": "Harper Lee", "nacionalidad":"Estadounidense" },
+{ "_id": 8, "nombre": "Homero", "nacionalidad": "Griega" },
+{ "_id": 9, "nombre": "Isabel Allende", "nacionalidad": "Chilena"},
+{ "_id": 10, "nombre": "Mario Vargas Llosa", "nacionalidad":"Peruana" }
+])
+
+db.prestamos.insertMany(
+[
+{ "_id": 1, "usuario_id": 1, "libro_id": 1, "fecha_inicio": "2024-01-01", "fecha_fin": null },
+{ "_id": 2, "usuario_id": 2, "libro_id": 2, "fecha_inicio": "2024-01-05", "fecha_fin": "2024-01-15" },
+{ "_id": 3, "usuario_id": 3, "libro_id": 3, "fecha_inicio": "2024-01-10", "fecha_fin": null },
+{ "_id": 4, "usuario_id": 4, "libro_id": 4, "fecha_inicio": "2024-01-12", "fecha_fin": null },
+{ "_id": 5, "usuario_id": 5, "libro_id": 5, "fecha_inicio": "2024-01-13", "fecha_fin": "2024-01-20" },
+{ "_id": 6, "usuario_id": 6, "libro_id": 6, "fecha_inicio": "2024-01-14", "fecha_fin": null },
+{ "_id": 7, "usuario_id": 7, "libro_id": 7, "fecha_inicio": "2024-01-15", "fecha_fin": "2024-01-25" },
+{ "_id": 8, "usuario_id": 8, "libro_id": 8, "fecha_inicio": "2024-01-16", "fecha_fin": null },
+{ "_id": 9, "usuario_id": 9, "libro_id": 9, "fecha_inicio": "2024-01-17", "fecha_fin": null },
+{ "_id": 10, "usuario_id": 10, "libro_id": 10, "fecha_inicio": "2024-01-18", "fecha_fin": null }
+])
+
+db.categorias.insertMany(
+[
+{"_id":1, "nombre": "Literatura" },
+{"_id":2, "nombre": "Fantasía" },
+{"_id":3, "nombre": "Ciencia Ficción" },
+{"_id":4, "nombre": "Romance" },
+{"_id":5, "nombre": "Clásicos" },
+{"_id":6, "nombre": "Historia" },
+{"_id":7, "nombre": "Biografías" },
+{"_id":8, "nombre": "Drama" },
+{"_id":9, "nombre": "Suspense" },
+{"_id":10, "nombre": "Aventura" }
+])
